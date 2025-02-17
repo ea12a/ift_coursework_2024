@@ -81,3 +81,7 @@ services:
         mc anonymous set public minio/csreport;
         tail -f /dev/null
         "
+
+networks:
+  iceberg_net:
+    driver: bridge
