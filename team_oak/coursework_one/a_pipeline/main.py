@@ -37,7 +37,7 @@ os.makedirs('CSR_Reports', exist_ok=True)
 
 def extract_year_from_url_or_snippet(url, snippet):
     """Extracts the year from the URL or snippet text."""
-    year_pattern = re.compile(r'(20[0-2][0-9])')  # Matches years 2000-2029
+    year_pattern = re.compile(r'(20[0-2][0-5])')  # Matches years 2000-2025
 
     url_match = year_pattern.search(url)
     snippet_match = year_pattern.search(snippet)
