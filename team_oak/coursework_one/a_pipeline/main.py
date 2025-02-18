@@ -4,10 +4,12 @@ import sqlite3
 import time
 import re
 from pymongo import MongoClient
+from dotenv import load_dotenv
 
+load_dotenv()
 # Google API credentials
-API_KEY = "AIzaSyA2BcIPxjME4tuosiZnxmrOmwF-1XeatrQ"
-SEARCH_ENGINE_ID = "904582a1658934c87"
+API_KEY = os.getenv("GOOGLE_API_KEY")
+SEARCH_ENGINE_ID = os.getenv("GOOGLE_SEARCH_ENGINE_ID")
 
 # Connect to SQLite database and retrieve company names
 db_path = '/Users/estheragossa/PycharmProjects/ift_coursework_2024/000.Database/SQL/Equity.db' #add path to your Equity.db
